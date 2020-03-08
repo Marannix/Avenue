@@ -23,6 +23,50 @@ allprojects {
     }
 }
 
+ext.applyLibraryModule = { project ->
+    project.apply plugin: 'com.android.application'
+    project.apply plugin: 'kotlin-android'
+    project.apply plugin: 'kotlin-android-extensions'
+    project.apply plugin: 'kotlin-kapt'
+
+    applyAllDependencies(project.dependencies)
+    applyAndroidSupportDependencies(project.dependencies)
+    applyJetBrainsDependency(project.dependencies)
+}
+
+ext.applyAllDependencies = { dependencies ->
+    dependencies.implementation Versions.gson
+    dependencies.implementation Versions.dagger
+    dependencies.kapt Versions.dagger_compiler
+    dependencies.kapt Versions.dagger_processor
+    dependencies.implementation Versions.lifecycle
+    dependencies.implementation Versions.lottie
+    dependencies.implementation Versions.picasso
+    dependencies.implementation Versions.retrofit
+    dependencies.implementation Versions.retrofit_adapter
+    dependencies.implementation Versions.retrofit_converter
+    dependencies.implementation Versions.room
+    dependencies.kapt Versions.room_compiler
+    dependencies.implementation Versions.room_runtime
+    dependencies.implementation Versions.rxandroid
+    dependencies.implementation Versions.rxjava
+
+}
+
+ext.applyAndroidSupportDependencies = { dependencies ->
+    dependencies.implementation Android.appcompat
+    dependencies.implementation Android.constraint_layout
+    dependencies.implementation Android.core_ktx
+    dependencies.androidTestImplementation Android.espresso
+    dependencies.testImplementation Android.junit
+    dependencies.implementation Android.legacy_support
+    dependencies.androidTestImplementation Android.test_junit
+}
+
+ext.applyJetBrainsDependency = { dependencies ->
+    dependencies.implementation JetBrains.kotlin_plugin
+}
+
 task clean(type: Delete) {
     delete rootProject.buildDir
 }

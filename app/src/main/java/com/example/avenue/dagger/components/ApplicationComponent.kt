@@ -4,6 +4,7 @@ import android.app.Application
 import com.example.avenue.MainApplication
 import com.example.avenue.dagger.modules.*
 import com.example.avenue.dagger.modules.navigator.DashboardNavigatorModule
+import com.example.dashboard.dagger.module.DashboardActivityModule
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjector
@@ -17,6 +18,7 @@ import javax.inject.Singleton
         RoomModule::class,
         ApplicationModule::class,
         ViewModelModule::class,
+        DashboardActivityModule::class,
         DashboardNavigatorModule::class,
         AndroidSupportInjectionModule::class]
 )

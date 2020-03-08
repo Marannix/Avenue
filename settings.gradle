@@ -1,2 +1,2 @@
-include ':app', ':dashboard'
+include ':app', ':dashboard', ':buildSrc', ':Dependencies', ':buildSrc'
 rootProject.name='Avenue'

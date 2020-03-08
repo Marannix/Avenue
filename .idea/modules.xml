@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Avenue.iml" filepath="$PROJECT_DIR$/Avenue.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/dashboard/dashboard.iml" filepath="$PROJECT_DIR$/dashboard/dashboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Avenue.iml" filepath="$PROJECT_DIR$/Avenue.iml" group="Avenue" />
+      <module fileurl="file://$PROJECT_DIR$/Dependencies/Avenue-Dependencies.iml" filepath="$PROJECT_DIR$/Dependencies/Avenue-Dependencies.iml" group="Avenue/Dependencies" />
+      <module fileurl="file://$PROJECT_DIR$/Dependencies/Dependencies.iml" filepath="$PROJECT_DIR$/Dependencies/Dependencies.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="Avenue/app" />
+      <module fileurl="file://$PROJECT_DIR$/buildSrc/buildSrc.iml" filepath="$PROJECT_DIR$/buildSrc/buildSrc.iml" group="Avenue/buildSrc" />
+      <module fileurl="file://$PROJECT_DIR$/dashboard/dashboard.iml" filepath="$PROJECT_DIR$/dashboard/dashboard.iml" group="Avenue/dashboard" />
       <module fileurl="file://$PROJECT_DIR$/test/test.iml" filepath="$PROJECT_DIR$/test/test.iml" />
     </modules>
   </component>
