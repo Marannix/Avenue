@@ -3,6 +3,7 @@ package com.example.avenue.dagger.components
 import android.app.Application
 import com.example.avenue.MainApplication
 import com.example.avenue.dagger.modules.*
+import com.example.avenue.dagger.modules.navigator.DashboardNavigatorModule
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjector
@@ -11,11 +12,12 @@ import javax.inject.Singleton
 
 @Singleton
 @Component(
-    modules = [ActivityBuilder::class,
+    modules = [ActivityBindingModule::class,
         ApiModule::class,
         RoomModule::class,
         ApplicationModule::class,
         ViewModelModule::class,
+        DashboardNavigatorModule::class,
         AndroidSupportInjectionModule::class]
 )
 interface ApplicationComponent : AndroidInjector<MainApplication> {
